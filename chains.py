@@ -67,7 +67,7 @@ class Chain:
             {resume}
 
             Based on the above job description and resume, write a professional and concise cover letter tailored to the job.
-            The content should be in 3 paragraphs only focusing on alignment of skills, motivation, and impact that strictly sufficient in single document page.  
+            The content should be in 3 paragraphs only focusing on alignment of skills, motivation, and impact that strictly sufficient in single document page not to exceed to other page.  
             Mention hiring manager and company name, At last aplicant contant details name,phone and email.
 
             ### Cover Letter:
