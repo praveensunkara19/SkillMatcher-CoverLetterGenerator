@@ -39,10 +39,10 @@ def text_to_pdf_bytes(text):
     pdf.set_auto_page_break(auto=True, margin=10)
     pdf.set_margins(left=10, top=10, right=10)
     pdf.add_page()
-    pdf.set_font("Arial", size=10)
+    pdf.set_font("Arial", size=12)
     for line in text.split('\n'):
         if line.strip():
-            pdf.multi_cell(0, 6, line.strip())
+            pdf.multi_cell(0, 8, line.strip())
     pdf_bytes = pdf.output(dest='S').encode('latin-1')
     return BytesIO(pdf_bytes)
 
