@@ -1,11 +1,10 @@
-# main.py
+# app.py
 
 import os
 import streamlit as st
 from streamlit_pdf_viewer import pdf_viewer
 import streamlit.components.v1 as components
 import tempfile
-
 
 from chains import Chain
 from utils import clean_text, pdf_text_extractor, text_fields, text_to_pdf_bytes
@@ -17,6 +16,7 @@ if not os.environ.get("USER_AGENT"):
 
 
 def create_streamlit_app(llm):
+    st.set_page_config(layout="wide", page_title="Skills Matcher and Cover Letter Generator", page_icon="📑")
     st.title("📄 Skill Matcher and Cover Letter Generator")
 
     url_input = st.text_input("Enter Job URL:", value="https://www.amazon.jobs/en/jobs/2890079/software-dev-engineer-i-amazon-university-talent-acquisition")
@@ -28,11 +28,18 @@ def create_streamlit_app(llm):
     with col1:
         pdf_file = st.file_uploader("Upload Resume (PDF)", type=('pdf'))
 
-    with col2:
-        view_button = st.button("View PDF")
+    # Initialize session state for PDF viewer toggle
+    if 'show_pdf' not in st.session_state:
+        st.session_state['show_pdf'] = False
 
-    # ✅ View uploaded PDF
-    if view_button and pdf_file is not None:
+    with col2:
+        if st.button("View PDF"):
+            st.session_state['show_pdf'] = True
+        if st.button("Close PDF"):
+            st.session_state['show_pdf'] = False
+
+    # ✅ View uploaded PDF if toggled
+    if st.session_state['show_pdf'] and pdf_file is not None:
         with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
             tmp_file.write(pdf_file.read())
             tmp_file_path = tmp_file.name
@@ -42,8 +49,6 @@ def create_streamlit_app(llm):
             html_code = pdf_viewer(input=tmp_file_path, width=700)
             if html_code:
                 components.html(html_code, height=600, scrolling=True)
-            else:
-                st.error("PDF Viewer returned empty output.")
         except Exception as e:
             st.error(f"Error rendering PDF: {e}")
 
@@ -106,6 +111,5 @@ def create_streamlit_app(llm):
 
 
 if __name__ == "__main__":
-    st.set_page_config(layout="wide", page_title="Skills Matcher and Cover Letter Generator", page_icon="📑")
     chain = Chain()
     create_streamlit_app(chain)

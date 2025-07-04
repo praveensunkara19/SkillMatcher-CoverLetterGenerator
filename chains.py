@@ -66,11 +66,28 @@ class Chain:
             ### RESUME:
             {resume}
 
-            Based on the above job description and resume, write a professional and concise cover letter tailored to the job.
-            The content should be in 3 paragraphs only focusing on alignment of skills, motivation, and impact that strictly sufficient in single document page not to exceed to other page.  
-            Mention hiring manager and company name, At last aplicant contant details name,phone and email.
+            You are a professional cover letter writer.
+
+            Write a **professional, impactful, and concise cover letter** tailored for the above job. Follow these strict instructions:
+
+            - Limit to **3 short paragraphs only**:
+            1. Brief greeting with mention of hiring manager and company name, and motivation for applying.
+            2. Summarise **only key skills and experiences relevant to the job** in clear bullet-like sentences if needed.
+            3. Closing with gratitude and clear applicant contact details in a single line at the end.
+
+            add a line that supports the your skills and company requirements.
+
+            - Keep it **strictly within a single document page**, avoiding long sentences or redundant phrases.
+            - Use a formal yet crisp tone to convey motivation, alignment, and impact effectively.
+
+            At the end, mention:
+
+            Name:[Your Full Name]
+            Phone:[Your Phone]
+            Email:[Your Email]
 
             ### Cover Letter:
+
             """
         )
 
