@@ -1,0 +1,18 @@
+# .gitattributes
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pdf
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+myenv/
+
+# Environment files
+.env
+
+# System files
+.DS_Store

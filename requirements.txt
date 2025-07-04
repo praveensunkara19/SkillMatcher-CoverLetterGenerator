@@ -1,0 +1,9 @@
+streamlit
+streamlit_pdf_viewer
+python-dotenv
+langchain-groq
+langchain_community 
+beautifulsoup4
+pypdf
+fpdf
+# chromadb==1.0.13

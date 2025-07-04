@@ -1,0 +1,23 @@
+# .gitattributes
+# Handle text files as UTF-8 automatically
+* text=auto
+# Explicitly set for common file types
+*.py text eol=lf
+*.ipynb text eol=lf
+*.txt text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+# Treat notebooks as binary for diff (optional, if you use nbdev or review notebooks via git, remove this)
+*.ipynb binary
+# Image files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg text
+# PDF files
+*.pdf filter=lfs diff=lfs merge=lfs -text
+# Keep shell scripts with LF endings
+*.sh text eol=lf
