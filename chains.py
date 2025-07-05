@@ -13,7 +13,7 @@ load_dotenv()
 class Chain:
     def __init__(self):
          self.llm = ChatGroq(
-            groq_api_key=os.getenv('GROQ_API_KEY'),
+            groq_api_key=os.getenv('GROQ_API_KEY'),  # Paste your Gorq API Keys
             model="llama-3.3-70b-versatile",
             temperature=0
          )
