@@ -15,9 +15,9 @@ This app matches your resume with a job posting URL and generates a tailored cov
 # Images
 
 <p align="center">
-  <img src="images/image1.png" alt="demo image" width="350"/>
-  <img src="images/image2.png" alt="demo image2" width="350"/>
-  <img src="images/image3.png" alt="demo image3" width="350"/>
+  <img src="images/image1.png" alt="demo image" width="400"/>
+  <img src="images/image2.png" alt="demo image2" width="400"/>
+  <img src="images/image3.png" alt="demo image3" width="400"/>
 </p>
 
 
