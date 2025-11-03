@@ -12,6 +12,15 @@ pinned: false
 # Skill Matcher and Cover Letter Generator using LLM(### llama-3.3-70b-versatile)
 This app matches your resume with a job posting URL and generates a tailored cover letter.
 
+# Images
+
+<p align="center">
+  <img src="images/image1.png" alt="demo image"/>
+  <img src="images/image2.png" alt="demo image2" >
+  <img src="images/image3.png" alt="demo image3" >
+</p>
+---
+
 ### 🚀 Features
 A Streamlit app that:
 - Matches job descriptions with your resume
