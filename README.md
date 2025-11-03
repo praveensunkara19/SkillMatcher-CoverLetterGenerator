@@ -15,9 +15,9 @@ This app matches your resume with a job posting URL and generates a tailored cov
 # Images
 
 <p align="center">
-  <img src="images/image1.png" alt="demo image" width="400"/>
-  <img src="images/image2.png" alt="demo image2" width="400"/>
-  <img src="images/image3.png" alt="demo image3" width="400"/>
+  <img src="images/image1.png" alt="demo image" width="450"/>
+  <img src="images/image2.png" alt="demo image2" width="450"/>
+  <img src="images/image3.png" alt="demo image3" width="450"/>
 </p>
 
 
@@ -38,9 +38,13 @@ Deployed on Hugging Face Spaces.
 ## 🛠️ How to run locally
 
 ```bash
+git clone https://github.com/praveensunkara19/SkillMatcher-CoverLetterGenerator.git
+
+myenv/scripts/activate
+
 pip install -r requirements.txt
 
-streamlit run main.py
+streamlit run app.py
 ```
 ---
 
